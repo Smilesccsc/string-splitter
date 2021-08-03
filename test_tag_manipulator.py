@@ -53,3 +53,17 @@ def test_split_two_string_array_of_two():
 
     #assert
     assert result == expResult
+
+def test_split_two_string_separated_by_whitespace_array_of_two():
+    # arrange
+    stringToSplit = "java python"
+    regex = " "
+    expResult = ["java","python"]
+    result = None
+    cut = TagManipulator()
+
+    #act
+    result = cut.parse_string(stringToSplit, regex)
+
+    #assert
+    assert result == expResult
